@@ -1,0 +1,21 @@
+.container {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.particle {
+  position: absolute;
+  border-radius: 50%;
+  background: var(--color-primary-500);
+  will-change: transform;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .particle {
+    animation: none;
+    transform: none;
+  }
+}
