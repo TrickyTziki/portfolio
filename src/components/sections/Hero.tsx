@@ -5,7 +5,7 @@ import styles from "@/styles/Hero.module.css";
 import { useEffect, useState, useRef, useCallback } from "react";
 
 // Particle component for the interactive background
-function Particle({ index }: { index: number }) {
+function Particle({}: { index: number }) {
   const randomX = Math.random() * 100;
   const randomY = Math.random() * 100;
   const randomDelay = Math.random() * 5;

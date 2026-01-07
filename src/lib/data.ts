@@ -310,7 +310,7 @@ export const skillCategories: SkillCategory[] = [
   },
   {
     name: "Testing",
-    skills: ["Jest", "JUnit", "Karma", "Jasmine", "Cypress"],
+    skills: ["Jest", "Karma", "Jasmine", "Cypress"],
   },
 ];
 
