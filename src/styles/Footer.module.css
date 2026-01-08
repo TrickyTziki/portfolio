@@ -1,6 +1,6 @@
 .footer {
-  background-color: rgba(15, 23, 42, 0.5);
-  border-top: 1px solid var(--color-dark-800);
+  background-color: var(--color-background-subtle);
+  border-top: 1px solid var(--color-border-subtle);
 }
 
 .container {
@@ -49,16 +49,15 @@
 }
 
 .logo {
+  font-family: var(--font-family-display);
   font-size: var(--font-size-2xl);
-  font-weight: var(--font-weight-bold);
-  background: linear-gradient(135deg, var(--color-primary-400), var(--color-primary-600));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  font-weight: var(--font-weight-normal);
+  color: var(--color-text-primary);
+  letter-spacing: 0.05em;
 }
 
 .copyright {
-  color: var(--color-dark-400);
+  color: var(--color-text-muted);
   font-size: var(--font-size-sm);
   margin-top: var(--spacing-2);
 }
@@ -70,12 +69,12 @@
 }
 
 .socialLink {
-  color: var(--color-dark-400);
+  color: var(--color-text-muted);
   transition: color var(--transition-base);
 }
 
 .socialLink:hover {
-  color: var(--color-primary-400);
+  color: var(--color-accent-400);
 }
 
 .socialIcon {
@@ -85,15 +84,16 @@
 
 .backToTop {
   padding: var(--spacing-3);
-  border-radius: var(--radius-full);
-  background-color: var(--color-dark-800);
-  color: var(--color-dark-300);
-  transition: color var(--transition-base), background-color var(--transition-base);
+  border-radius: var(--radius-sm);
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border-subtle);
+  color: var(--color-text-muted);
+  transition: all var(--transition-base);
 }
 
 .backToTop:hover {
-  color: var(--color-primary-400);
-  background-color: var(--color-dark-700);
+  color: var(--color-text-primary);
+  border-color: var(--color-border);
 }
 
 .backToTopIcon {

@@ -16,7 +16,7 @@ export function Card({ children, className = '', hover = true }: CardProps) {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: '-50px' }}
       transition={{ duration: 0.5 }}
-      whileHover={hover ? { y: -5, boxShadow: '0 20px 40px rgba(139, 92, 246, 0.1)' } : undefined}
+      whileHover={hover ? { y: -4, boxShadow: '0 16px 32px rgba(0, 0, 0, 0.2)' } : undefined}
     >
       {children}
     </motion.div>

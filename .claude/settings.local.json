@@ -2,12 +2,14 @@
   "permissions": {
     "allow": [
       "Bash(npm run dev:*)",
-      "mcp__ide__getDiagnostics"
+      "mcp__ide__getDiagnostics",
+      "Bash(dir /s \"D:\\\\Travail\\\\Portfolio Stefanos Stoikos\\\\src\")",
+      "Bash(npm run build:*)"
     ]
   },
+  "enableAllProjectMcpServers": true,
   "enabledMcpjsonServers": [
     "sequential-thinking",
     "context7"
-  ],
-  "enableAllProjectMcpServers": true
+  ]
 }

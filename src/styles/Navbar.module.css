@@ -12,10 +12,10 @@
 .navScrolled {
   padding-top: var(--spacing-4);
   padding-bottom: var(--spacing-4);
-  background: rgba(15, 23, 42, 0.7);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border-bottom: 1px solid rgba(139, 92, 246, 0.1);
+  background: rgba(15, 13, 12, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--color-border-subtle);
 }
 
 .container {
@@ -43,23 +43,27 @@
 .inner {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-end;
 }
 
 .logo {
-  font-size: var(--font-size-xl);
-  font-weight: var(--font-weight-bold);
-  background: linear-gradient(135deg, var(--color-primary-400), var(--color-primary-600));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  font-family: var(--font-family-display);
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-normal);
+  color: var(--color-text-primary);
+  letter-spacing: 0.05em;
+  transition: color var(--transition-base);
+}
+
+.logo:hover {
+  color: var(--color-accent-400);
 }
 
 /* Desktop navigation */
 .desktopNav {
   display: none;
   align-items: center;
-  gap: var(--spacing-8);
+  gap: var(--spacing-10);
 }
 
 @media (min-width: 768px) {
@@ -71,39 +75,40 @@
 .navLink {
   font-size: var(--font-size-sm);
   font-weight: var(--font-weight-medium);
-  color: var(--color-dark-300);
+  color: var(--color-text-muted);
   transition: color var(--transition-base);
   position: relative;
+  letter-spacing: var(--letter-spacing-wide);
+  text-transform: uppercase;
 }
 
 .navLink:hover {
-  color: white;
+  color: var(--color-text-primary);
 }
 
 .navLinkActive {
-  color: var(--color-primary-400);
+  color: var(--color-text-primary);
 }
 
 .activeIndicator {
   position: absolute;
-  bottom: -0.25rem;
+  bottom: -0.5rem;
   left: 0;
   right: 0;
-  height: 2px;
-  background-color: var(--color-primary-500);
-  border-radius: var(--radius-full);
+  height: 1px;
+  background-color: var(--color-accent-500);
 }
 
 /* Mobile menu button */
 .menuButton {
   display: block;
   padding: var(--spacing-2);
-  color: var(--color-dark-300);
+  color: var(--color-text-muted);
   transition: color var(--transition-base);
 }
 
 .menuButton:hover {
-  color: white;
+  color: var(--color-text-primary);
 }
 
 @media (min-width: 768px) {
@@ -115,6 +120,7 @@
 .menuIcon {
   width: 1.5rem;
   height: 1.5rem;
+  stroke-width: 1.5;
 }
 
 /* Mobile menu */
@@ -122,12 +128,12 @@
   margin-top: var(--spacing-4);
   margin-left: var(--spacing-4);
   margin-right: var(--spacing-4);
-  border-radius: var(--radius-xl);
+  border-radius: var(--radius-lg);
   overflow: hidden;
-  background: rgba(15, 23, 42, 0.7);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(139, 92, 246, 0.1);
+  background: var(--color-background-elevated);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--color-border-subtle);
 }
 
 @media (min-width: 768px) {
@@ -137,7 +143,7 @@
 }
 
 .mobileMenuInner {
-  padding: var(--spacing-4) var(--spacing-6);
+  padding: var(--spacing-6);
   display: flex;
   flex-direction: column;
   gap: var(--spacing-4);
@@ -145,16 +151,19 @@
 
 .mobileNavLink {
   display: block;
-  font-size: var(--font-size-base);
+  font-size: var(--font-size-sm);
   font-weight: var(--font-weight-medium);
-  color: var(--color-dark-300);
+  color: var(--color-text-muted);
   transition: color var(--transition-base);
+  letter-spacing: var(--letter-spacing-wide);
+  text-transform: uppercase;
+  padding: var(--spacing-2) 0;
 }
 
 .mobileNavLink:hover {
-  color: white;
+  color: var(--color-text-primary);
 }
 
 .mobileNavLinkActive {
-  color: var(--color-primary-400);
+  color: var(--color-accent-400);
 }

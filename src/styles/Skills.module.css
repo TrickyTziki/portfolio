@@ -1,8 +1,7 @@
 .section {
   position: relative;
-  min-height: 100vh;
   padding: var(--spacing-24) var(--spacing-6);
-  background-color: rgba(15, 23, 42, 0.3);
+  background-color: var(--color-background-subtle);
   overflow: hidden;
 }
 
@@ -41,25 +40,28 @@
   display: flex;
   align-items: center;
   gap: var(--spacing-3);
-  margin-bottom: var(--spacing-4);
+  margin-bottom: var(--spacing-5);
+  padding-bottom: var(--spacing-4);
+  border-bottom: 1px solid var(--color-border-subtle);
 }
 
 .iconWrapper {
   padding: var(--spacing-2);
-  border-radius: var(--radius-lg);
-  background-color: rgba(147, 51, 234, 0.2);
-  color: var(--color-primary-400);
+  border-radius: var(--radius-md);
+  background-color: var(--color-surface);
+  color: var(--color-accent-400);
 }
 
 .icon {
-  width: 1.5rem;
-  height: 1.5rem;
+  width: 1.25rem;
+  height: 1.25rem;
 }
 
 .categoryName {
+  font-family: var(--font-family-display);
   font-size: var(--font-size-lg);
-  font-weight: var(--font-weight-semibold);
-  color: white;
+  font-weight: var(--font-weight-normal);
+  color: var(--color-text-primary);
 }
 
 .skillsList {
@@ -75,10 +77,10 @@
 }
 
 .skillDot {
-  width: 0.5rem;
-  height: 0.5rem;
+  width: 4px;
+  height: 4px;
   border-radius: 50%;
-  background-color: var(--color-primary-500);
+  background-color: var(--color-accent-500);
   flex-shrink: 0;
 }
 
@@ -86,25 +88,28 @@
   width: 1.25rem;
   height: 1.25rem;
   flex-shrink: 0;
+  opacity: 0.7;
 }
 
 .skillName {
-  color: var(--color-dark-300);
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-sm);
 }
 
 /* Credentials Section */
 .credentialsSection {
-  margin-top: var(--spacing-16);
-  padding-top: var(--spacing-12);
-  border-top: 1px solid rgba(139, 92, 246, 0.1);
+  margin-top: var(--spacing-20);
+  padding-top: var(--spacing-16);
+  border-top: 1px solid var(--color-border-subtle);
 }
 
 .credentialsSectionTitle {
+  font-family: var(--font-family-display);
   font-size: var(--font-size-2xl);
-  font-weight: var(--font-weight-semibold);
-  color: white;
+  font-weight: var(--font-weight-normal);
+  color: var(--color-text-primary);
   text-align: center;
-  margin-bottom: var(--spacing-8);
+  margin-bottom: var(--spacing-10);
 }
 
 @media (min-width: 768px) {
@@ -131,9 +136,10 @@
 }
 
 .credentialTitle {
+  font-family: var(--font-family-display);
   font-size: var(--font-size-lg);
-  font-weight: var(--font-weight-semibold);
-  color: white;
+  font-weight: var(--font-weight-normal);
+  color: var(--color-text-primary);
   margin-bottom: var(--spacing-4);
   display: flex;
   align-items: center;
@@ -143,7 +149,7 @@
 .credentialIcon {
   width: 1.25rem;
   height: 1.25rem;
-  color: var(--color-primary-500);
+  color: var(--color-accent-500);
 }
 
 /* Education */
@@ -154,39 +160,46 @@
 }
 
 .educationItem {
-  border-left: 2px solid rgba(147, 51, 234, 0.5);
+  border-left: 1px solid var(--color-border);
   padding-left: var(--spacing-4);
 }
 
 .educationDegree {
   font-weight: var(--font-weight-medium);
-  color: white;
+  color: var(--color-text-primary);
+  font-size: var(--font-size-sm);
 }
 
 .educationInstitution {
-  color: var(--color-dark-400);
+  color: var(--color-text-secondary);
   font-size: var(--font-size-sm);
 }
 
 .educationYear {
-  color: var(--color-dark-500);
+  color: var(--color-text-muted);
   font-size: var(--font-size-sm);
 }
 
 /* Languages */
 .languagesList {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   gap: var(--spacing-3);
 }
 
 .languageItem {
   display: flex;
   align-items: center;
-  padding: 0.375rem var(--spacing-3);
-  background-color: var(--color-dark-800);
-  border-radius: var(--radius-full);
+  padding: var(--spacing-2) var(--spacing-3);
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border-subtle);
+  border-radius: var(--radius-sm);
   font-size: var(--font-size-sm);
+  transition: all var(--transition-base);
+}
+
+.languageItem:hover {
+  border-color: var(--color-border);
 }
 
 .languageFlag {
@@ -198,11 +211,11 @@
 }
 
 .languageName {
-  color: white;
+  color: var(--color-text-primary);
 }
 
 .languageLevel {
-  color: var(--color-dark-400);
+  color: var(--color-text-muted);
   margin-left: var(--spacing-1);
 }
 
@@ -210,19 +223,20 @@
 .certificationsList {
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-2);
+  gap: var(--spacing-3);
 }
 
 .certificationItem {
   display: flex;
   align-items: center;
-  gap: var(--spacing-2);
-  color: var(--color-dark-200);
+  gap: var(--spacing-3);
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-sm);
 }
 
 .certCheckIcon {
   width: 1rem;
   height: 1rem;
-  color: var(--color-primary-500);
+  color: var(--color-accent-500);
   flex-shrink: 0;
 }

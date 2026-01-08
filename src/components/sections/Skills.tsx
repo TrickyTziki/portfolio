@@ -5,7 +5,7 @@ import {
   languages,
   certifications,
 } from "@/lib/data";
-import { SectionTitle, Card, FloatingParticles } from "@/components/ui";
+import { SectionTitle, Card } from "@/components/ui";
 import { skillIconsByCategory, flagIcons } from "@/components/icons/SkillIcons";
 import styles from "@/styles/Skills.module.css";
 
@@ -111,8 +111,6 @@ const categoryIcons: Record<string, JSX.Element> = {
 export function Skills() {
   return (
     <section id="skills" className={styles.section}>
-      <FloatingParticles particleCount={20} />
-
       <div className={styles.container}>
         <SectionTitle
           title="Skills & Technologies"

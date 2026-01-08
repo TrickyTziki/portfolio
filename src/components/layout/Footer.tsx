@@ -15,9 +15,6 @@ export function Footer() {
         <div className={styles.inner}>
           {/* Logo & Copyright */}
           <div className={styles.branding}>
-            <a href="#home" className={styles.logo}>
-              SS
-            </a>
             <p className={styles.copyright}>
               &copy; {currentYear} {personalInfo.name}. All rights reserved.
             </p>

@@ -1,7 +1,7 @@
 import { useState, type FormEvent } from "react";
 import { motion } from "framer-motion";
 import { personalInfo } from "@/lib/data";
-import { SectionTitle, Button, Card, FloatingParticles } from "@/components/ui";
+import { SectionTitle, Button, Card } from "@/components/ui";
 import styles from "@/styles/Contact.module.css";
 
 export function Contact() {
@@ -122,8 +122,6 @@ export function Contact() {
 
   return (
     <section id="contact" className={styles.section}>
-      <FloatingParticles particleCount={15} />
-
       <div className={styles.container}>
         <SectionTitle
           title="Get In Touch"
