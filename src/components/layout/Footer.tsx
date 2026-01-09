@@ -1,9 +1,14 @@
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { personalInfo } from "@/lib/data";
 import styles from "@/styles/Footer.module.css";
 
 export function Footer() {
-  const currentYear = new Date().getFullYear();
+  const [currentYear, setCurrentYear] = useState<number | null>(null);
+
+  useEffect(() => {
+    setCurrentYear(new Date().getFullYear());
+  }, []);
 
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
@@ -16,7 +21,7 @@ export function Footer() {
           {/* Logo & Copyright */}
           <div className={styles.branding}>
             <p className={styles.copyright}>
-              &copy; {currentYear} {personalInfo.name}. All rights reserved.
+              &copy; {currentYear ?? ""} {personalInfo.name}. All rights reserved.
             </p>
           </div>
 

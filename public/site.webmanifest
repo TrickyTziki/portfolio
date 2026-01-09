@@ -1,0 +1,31 @@
+{
+  "name": "Stefanos Stoikos | Full Stack Developer",
+  "short_name": "S. Stoikos",
+  "description": "Full Stack Developer Portfolio - React, Node.js, TypeScript Expert",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0f0d0c",
+  "theme_color": "#c4935d",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/favicon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/favicon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "categories": ["portfolio", "business", "developer"],
+  "lang": "en",
+  "dir": "ltr"
+}

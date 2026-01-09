@@ -19,43 +19,6 @@ function useTextReveal(texts: string[], interval = 4000) {
   return texts[currentIndex];
 }
 
-// Animated counter component
-function AnimatedCounter({
-  value,
-  suffix = "",
-}: {
-  value: number;
-  suffix?: string;
-}) {
-  const [count, setCount] = useState(0);
-
-  useEffect(() => {
-    const duration = 2000;
-    const steps = 60;
-    const increment = value / steps;
-    let current = 0;
-
-    const timer = setInterval(() => {
-      current += increment;
-      if (current >= value) {
-        setCount(value);
-        clearInterval(timer);
-      } else {
-        setCount(Math.floor(current));
-      }
-    }, duration / steps);
-
-    return () => clearInterval(timer);
-  }, [value]);
-
-  return (
-    <span>
-      {count}
-      {suffix}
-    </span>
-  );
-}
-
 export function Hero() {
   const titles = [
     "Full Stack Developer",
@@ -136,30 +99,6 @@ export function Hero() {
           challenges into refined solutions.
         </motion.p>
 
-        {/* Stats row - minimal */}
-        <motion.div className={styles.stats} variants={itemVariants}>
-          <div className={styles.statItem}>
-            <span className={styles.statValue}>
-              <AnimatedCounter value={4} suffix="+" />
-            </span>
-            <span className={styles.statLabel}>Years Experience</span>
-          </div>
-          <div className={styles.statDivider} />
-          <div className={styles.statItem}>
-            <span className={styles.statValue}>
-              <AnimatedCounter value={10} suffix="+" />
-            </span>
-            <span className={styles.statLabel}>Projects Delivered</span>
-          </div>
-          <div className={styles.statDivider} />
-          <div className={styles.statItem}>
-            <span className={styles.statValue}>
-              <AnimatedCounter value={30} suffix="+" />
-            </span>
-            <span className={styles.statLabel}>Technologies</span>
-          </div>
-        </motion.div>
-
         {/* CTA Buttons - elegant */}
         <motion.div className={styles.buttons} variants={itemVariants}>
           <Button href="#contact" size="lg" className={styles.primaryBtn}>
@@ -208,21 +147,6 @@ export function Hero() {
             ))}
           </div>
         </motion.div>
-      </motion.div>
-
-      {/* Scroll indicator */}
-      <motion.div
-        className={styles.scrollIndicator}
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 1.5, duration: 1 }}
-      >
-        <span className={styles.scrollText}>Scroll</span>
-        <motion.div
-          className={styles.scrollLine}
-          animate={{ scaleY: [0, 1, 0] }}
-          transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-        />
       </motion.div>
     </section>
   );

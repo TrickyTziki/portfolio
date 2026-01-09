@@ -2,3 +2,26 @@
   min-height: 100vh;
   background-color: var(--color-background);
 }
+
+/* Skip to main content link - visible only on focus for accessibility */
+.skipLink {
+  position: absolute;
+  top: -100%;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: var(--spacing-3) var(--spacing-6);
+  background-color: var(--color-accent-600);
+  color: var(--color-text-primary);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  text-decoration: none;
+  border-radius: var(--radius-md);
+  z-index: 9999;
+  transition: top var(--transition-base);
+}
+
+.skipLink:focus {
+  top: var(--spacing-4);
+  outline: 2px solid var(--color-accent-400);
+  outline-offset: 2px;
+}

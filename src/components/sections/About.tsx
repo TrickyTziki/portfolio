@@ -75,8 +75,11 @@ export function About() {
             <div className={styles.imageContainer}>
               <img
                 src={profileImage}
-                alt="Stefanos Stoikos"
+                alt="Stefanos Stoikos - Full Stack Developer based in Belgium"
                 className={styles.profileImage}
+                loading="lazy"
+                width="400"
+                height="400"
               />
               <div className={styles.imageGlow} />
             </div>
