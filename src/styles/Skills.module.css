@@ -14,6 +14,7 @@
 .container {
   position: relative;
   z-index: 1;
+  width: 100%;
   max-width: 72rem;
   margin-left: auto;
   margin-right: auto;
@@ -22,6 +23,10 @@
 .grid {
   display: grid;
   gap: var(--spacing-6);
+}
+
+.grid > * {
+  min-width: 0;
 }
 
 @media (min-width: 768px) {
@@ -127,6 +132,10 @@
   gap: var(--spacing-6);
 }
 
+.credentialsGrid > * {
+  min-width: 0;
+}
+
 @media (min-width: 768px) {
   .credentialsGrid {
     grid-template-columns: repeat(2, 1fr);
@@ -187,8 +196,14 @@
 /* Languages */
 .languagesList {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 1fr;
   gap: var(--spacing-3);
+}
+
+@media (min-width: 480px) {
+  .languagesList {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 .languageItem {
@@ -200,6 +215,8 @@
   border-radius: var(--radius-sm);
   font-size: var(--font-size-sm);
   transition: all var(--transition-base);
+  min-width: 0;
+  overflow: hidden;
 }
 
 .languageItem:hover {
@@ -216,11 +233,13 @@
 
 .languageName {
   color: var(--color-text-primary);
+  white-space: nowrap;
 }
 
 .languageLevel {
   color: var(--color-text-muted);
   margin-left: var(--spacing-1);
+  white-space: nowrap;
 }
 
 /* Certifications */

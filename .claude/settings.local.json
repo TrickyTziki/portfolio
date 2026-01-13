@@ -6,7 +6,8 @@
       "Bash(dir /s \"D:\\\\Travail\\\\Portfolio Stefanos Stoikos\\\\src\")",
       "Bash(npm run build:*)",
       "Bash(npm run lint)",
-      "Bash(dir /b)"
+      "Bash(dir /b)",
+      "Bash(findstr:*)"
     ]
   },
   "enableAllProjectMcpServers": true,

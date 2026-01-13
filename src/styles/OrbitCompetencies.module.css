@@ -35,6 +35,8 @@
   cursor: default;
   transition: all var(--transition-base);
   text-align: center;
+  min-width: 0;
+  overflow: hidden;
 }
 
 .competencyItem:hover {
