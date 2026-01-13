@@ -198,7 +198,7 @@
 @media (max-width: 640px) {
   .hero {
     align-items: flex-start;
-    padding-top: var(--spacing-24);
+    padding-top: var(--spacing-32);
   }
 
   .content {
